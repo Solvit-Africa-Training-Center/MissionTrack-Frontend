@@ -1,14 +1,16 @@
+import { useAuth } from "./context/AuthContext";
+import EmployeeDashboard from "./pages/EmployeeDashboard"
+import LoginForm from "./pages/LoginFom"
 
 
-function App() {
-  
+const App: React.FC = () => {
+  const { user } = useAuth();
 
-  return (
-    <>
-    <h1 className="flex justify-center text-primaryColor-800  mt-10 ">Mission Track</h1>
-     
-    </>
-  )
-}
+  return user ? (
+    <EmployeeDashboard />  // ← Shows when logged in
+  ) : (
+    <LoginForm />          // ← Shows when not logged in
+  );
+};
 
 export default App
