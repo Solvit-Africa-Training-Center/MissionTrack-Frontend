@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import EmployeeDashboard from "../pages/EmployeeDashboard";
 import LoginForm from "../pages/LoginFom";
 import { useAuth } from "../context/AuthContext";
@@ -7,29 +7,25 @@ const AppRoutes: React.FC = () => {
   const { user } = useAuth();
 
   return (
-    
-      <div>
-         {/* Default route */}
-        <Route
-          path="/"
-          element={user ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />}
-        />
+    <Routes>
+      {/* Default route */}
+      <Route
+        path="/"
+        element={user ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />}
+      />
 
-        {/* Login page */}
-        <Route
-          path="/login"
-          element={user ? <Navigate to="/dashboard" replace /> : <LoginForm />}
-        />
+      {/* Login page */}
+      <Route
+        path="/login"
+        element={user ? <Navigate to="/dashboard" replace /> : <LoginForm />}
+      />
 
-        {/* Dashboard page (protected) */}
-        <Route
-          path="/dashboard"
-          element={user ? <EmployeeDashboard /> : <Navigate to="/login" replace />}
-        />
-      
-      </div>
-       
-   
+      {/* Dashboard page (protected) */}
+      <Route
+        path="/dashboard"
+        element={user ? <EmployeeDashboard /> : <Navigate to="/login" replace />}
+      />
+    </Routes>
   );
 };
 
