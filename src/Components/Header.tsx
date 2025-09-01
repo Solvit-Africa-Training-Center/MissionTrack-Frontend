@@ -22,17 +22,22 @@ const Header: React.FC = () => {
             <Bell className="w-6 h-6" />
             <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
           </button>
-          <div className="flex items-center space-x-3 bg-gray-50 rounded-lg px-3 py-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-              <span className="text-white text-sm font-medium">
-                {user?.email.charAt(0).toUpperCase()}
-              </span>
+
+          {user ? (
+            <div className="flex items-center space-x-3 bg-gray-50 rounded-lg px-3 py-2">
+              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-sm font-medium">
+                  {user.charAt(0).toUpperCase()}
+                </span>
+              </div>
+              <div className="text-right">
+                <p className="text-sm font-medium text-gray-700">{user}</p>
+                <p className="text-xs text-gray-500">Employee</p>
+              </div>
             </div>
-            <div className="text-right">
-              <p className="text-sm font-medium text-gray-700">{user?.email}</p>
-              <p className="text-xs text-gray-500">Employee</p>
-            </div>
-          </div>
+          ) : (
+            <div className="text-gray-500 italic">Not logged in</div>
+          )}
         </div>
       </div>
     </header>

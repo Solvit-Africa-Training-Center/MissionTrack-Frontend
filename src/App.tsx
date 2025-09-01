@@ -1,14 +1,13 @@
-import { Route } from "react-router-dom";
+import AppRoutes from "./Router/AppRoutes";
 
-
-const App: React.FC = () => {
-
-
-  return (
+function App()  {
+ 
+   return (
     <div>
-      <Route/>
+     <AppRoutes/>
     </div>
-  );
+     
+   );
 };
 
 export default App;
