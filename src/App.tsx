@@ -16,7 +16,8 @@
 // export default App
 
 
-import LandingPage from "./pages/LandingPage" 
+// import LandingPage from "./pages/LandingPage" 
+ import Notification from "./pages/Notification"
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
   return (
     <>
      
-     <LandingPage/>  
+     {/* <LandingPage/> */}
+     <Notification/>  
     </>
   )
 }
