@@ -1,62 +1,31 @@
-import React, { createContext, useState, useContext, useEffect, type ReactNode } from "react";
+import React, { createContext, useContext, useState, type ReactNode} from "react";
+import { useNavigate } from "react-router-dom";
 
-type User = {
-  email: string;
-  access_token: string;
-  refresh_token?: string;
-};
-
-type AuthContextType = {
-  user: User | null;
+interface AuthContextType {
+  user: string | null;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-};
+}
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-
-  // Load user from localStorage on first render
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
+  const [user, setUser] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const login = async (email: string, password: string) => {
-    try {
-      const response = await fetch("https://api.escuelajs.co/api/v1/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Invalid email or password");
-      }
-
-      const data = await response.json();
-
-      const newUser: User = {
-        email,
-        access_token: data.access_token,
-        refresh_token: data.refresh_token,
-      };
-
-      setUser(newUser);
-      localStorage.setItem("user", JSON.stringify(newUser)); // persist login
-    } catch (error: any) {
-      throw new Error(error.message || "Login failed");
+    // Fake auth check for now
+    if (email === "test@example.com" && password === "password") {
+      setUser(email);
+      navigate("/dashboard"); // 🔥 redirect after login
+    } else {
+      alert("Invalid credentials");
     }
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem("user");
+    navigate("/login"); // 🔥 redirect after logout
   };
 
   return (
@@ -66,8 +35,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   );
 };
 
-export const useAuth = (): AuthContextType => {
-  const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error("useAuth must be used inside AuthProvider");
-  return ctx;
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
 };

@@ -1,16 +1,14 @@
-import { useAuth } from "./context/AuthContext";
-import EmployeeDashboard from "./pages/EmployeeDashboard"
-import LoginForm from "./pages/LoginFom"
+import { Route } from "react-router-dom";
 
 
 const App: React.FC = () => {
-  const { user } = useAuth();
 
-  return user ? (
-    <EmployeeDashboard />  // ← Shows when logged in
-  ) : (
-    <LoginForm />          // ← Shows when not logged in
+
+  return (
+    <div>
+      <Route/>
+    </div>
   );
 };
 
-export default App
+export default App;
