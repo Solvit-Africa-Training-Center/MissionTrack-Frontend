@@ -1,16 +1,14 @@
-import { useAuth } from "./context/AuthContext";
-import EmployeeDashboard from "./pages/EmployeeDashboard"
-import LoginForm from "./pages/LoginFom"
+
 
 
 const App: React.FC = () => {
-  const { user } = useAuth();
 
-  return user ? (
-    <EmployeeDashboard />  // ← Shows when logged in
-  ) : (
-    <LoginForm />          // ← Shows when not logged in
+
+  return (
+    <div>
+      <h1 className="text-blue-900 font-bold text-2xl mt-15 text-center">Mission Track</h1>
+    </div>
   );
 };
 
-export default App
+export default App;
