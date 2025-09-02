@@ -16,8 +16,8 @@
 // export default App
 
 
-// import LandingPage from "./pages/LandingPage" 
- import Settings from "./pages/Settings"
+import LandingPage from "./pages/LandingPage" 
+//  import Settings from "./pages/Settings"
 
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
   return (
     <>
      
-     {/* <LandingPage/> */}
-     <Settings/>  
+      <LandingPage/> 
+     {/* <Settings/>   */}
     </>
   )
 }

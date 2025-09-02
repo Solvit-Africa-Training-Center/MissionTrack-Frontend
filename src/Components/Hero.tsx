@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
 
 
     return (
-        <div className="h-[650px] w-full bg-gradient-to-r font-bold p-{10px}  from-[#4D8FFAE5] to-[#11A677E5]">
+        <div className="h-[650px] w-full bg-gradient-to-r font-bold p-{10px}  from-[#4D8FFA] to-[#11A677] backdrop-blur-md">
             <div className="flex justify-center  ">
                 <div className="h-[600px] w-[1300px] mt-30 flex   justify-between gap-10 ">
                     <div className="flex flex-col   gap-10">
