@@ -17,7 +17,7 @@
 
 
 // import LandingPage from "./pages/LandingPage" 
- import Notification from "./pages/Notification"
+ import Settings from "./pages/Settings"
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     <>
      
      {/* <LandingPage/> */}
-     <Notification/>  
+     <Settings/>  
     </>
   )
 }

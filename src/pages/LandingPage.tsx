@@ -12,7 +12,9 @@ const LandingPage: React.FC = () => {
   return (
     <div className=" ">
       <HeadLanding />
+      <div className="">
       <Hero />
+      </div>
       <Features />
       <Working />
 
