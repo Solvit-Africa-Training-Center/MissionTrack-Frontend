@@ -18,22 +18,24 @@ const StatsGrid: React.FC<{ stats: Stat[] }> = ({ stats }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
       {stats.map((stat, i) => {
         const Icon = stat.icon;
         return (
           <div
             key={i}
-            className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+            className="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-200 hover:shadow-md hover:scale-[1.02] transition-transform"
           >
-            <div className="flex items-center justify-between mb-4">
-              <div className={`p-3 rounded-lg border ${colorClasses[stat.color]}`}>
-                <Icon className="w-6 h-6" />
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+              <div className={`p-2 sm:p-3 rounded-lg border ${colorClasses[stat.color]}`}>
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <ChevronRight className="w-5 h-5 text-gray-400" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</h3>
-            <p className="text-gray-600 text-sm">{stat.label}</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
+              {stat.value}
+            </h3>
+            <p className="text-gray-600 text-xs sm:text-sm">{stat.label}</p>
           </div>
         );
       })}

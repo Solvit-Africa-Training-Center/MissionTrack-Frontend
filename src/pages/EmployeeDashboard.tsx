@@ -1,6 +1,6 @@
 // EmployeeDashboard.tsx
 import React, { useState } from "react";
-import { Home, Bell, User, Plus, Calendar, Settings, FileText, CheckCircle, Clock, DollarSign, BarChart3 } from "lucide-react";
+import { Home, Bell, User, Plus, Calendar, FileText, CheckCircle, Clock, DollarSign, BarChart3 } from "lucide-react";
 import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
 import StatsGrid from "../Components/StatsGrid";
@@ -34,9 +34,7 @@ const EmployeeDashboard: React.FC = () => {
     { id: "dashboard", label: "Dashboard", icon: Home },
     { id: "notifications", label: "Notifications", icon: Bell },
     { id: "profile", label: "Profile", icon: User },
-    { id: "new-request", label: "New Mission Request", icon: Plus },
-    { id: "schedule", label: "Schedule Meeting", icon: Calendar },
-    { id: "settings", label: "System Settings", icon: Settings },
+   
   ];
 
   return (
