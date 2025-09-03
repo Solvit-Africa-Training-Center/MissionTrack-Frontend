@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
       </div>
 
       {/* Right side - Notification + User + Theme */}
-      <div className="flex items-center gap-6">
+      <div className="flex  items-center gap-6">
         {/* Theme toggle button */}
         <button
           onClick={toggleTheme}
