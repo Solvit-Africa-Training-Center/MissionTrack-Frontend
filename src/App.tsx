@@ -1,6 +1,6 @@
 
 
-// import AppRoute from "./Router/AppRoute";
+import AppRoute from "./Router/AppRoute";
 
 
 // const App: React.FC = () => {
@@ -16,29 +16,14 @@
 // export default App
 
 
-import LandingPage from "./pages/LandingPage" 
-  // import Settings from "./pages/Settings"
 
-
+// =======
 function App() {
 
   return (
-    <>
-     
-      <LandingPage/> 
-     {/* <Settings/>   */}
-    </>
-  )
+    <AppRoute/>
+  );
 }
 
-export default App
-// =======
-// function App() {
-
-//   return (
-//     <AppRoute/>
-//   );
-// }
-
-// export default App;
+export default App;
 

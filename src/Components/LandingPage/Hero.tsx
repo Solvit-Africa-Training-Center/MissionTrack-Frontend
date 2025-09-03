@@ -29,15 +29,15 @@ const Hero: React.FC = () => {
       ></div>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#4D8FFA]/70 to-[#11A677]/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primaryColor-10 to-accent-10"></div>
 
       {/* Content */}
       <div className="relative flex justify-center">
         <div className="h-[600px] w-[1300px] flex items-center justify-between">
           {/* Left text */}
           <div className="flex flex-col gap-10">
-            <div className="flex flex-col max-sm:mt-0 max-sm:ml-2 gap-20 max-sm:gap-10">
-              <p className="text-white max-sm:text-xl text-4xl">
+            <div className="flex flex-col max-sm:mt-0 max-sm:ml-2 gap-4 max-sm:gap-10">
+              <p className="text-gray-800   11 max-sm:text-xl text-4xl">
                 Your Missions,
                 <br />
                 Streamlined from <br />
@@ -45,14 +45,13 @@ const Hero: React.FC = () => {
                   Start to Approval.
                 </span>
               </p>
-              <p className="text-white max-sm:text-sm">
-                From Request to mission expenses <br />
-                All in One Flow
+              <p className="text-gray-800 text-sm fo max-sm:text-sm">
+                From Request to mission expenses.All in One Flow
               </p>
             </div>
             <div>
-              <button className="bg-white text-[#4D8FFAE5] rounded-lg px-6 max-sm:p-1 ml-2 py-1">
-                Big Button
+              <button className="bg-primaryColor-500 text-white rounded-lg px-6 max-sm:p-1 ml-2 py-2">
+                Get Started
               </button>
             </div>
           </div>

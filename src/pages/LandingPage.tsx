@@ -4,6 +4,8 @@ import Hero from "../Components/LandingPage/Hero";
 import Features from "../Components/LandingPage/Features";
 import Working from "../Components/LandingPage/Working";
 import Feedback from "../Components/LandingPage/Feedback";
+import Footer from "../Components/LandingPage/Footer";
+
 
 const LandingPage: React.FC = () => {
   return (
@@ -22,7 +24,9 @@ const LandingPage: React.FC = () => {
         </div>
         <Features />
         <Working />
+        
         <Feedback />
+        <Footer/>
       </div>
     </div>
   )
