@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 
@@ -45,9 +46,11 @@ const LoginForm: React.FC = () => {
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
           Mission Request System
         </h1>
+        <h1 className="font-bold text-2xl">Welcome</h1>
         <p className="text-gray-600 text-lg">
           Sign in to manage your mission requests
         </p>
+
       </div>
 
       {/* Main Login Card */}
@@ -172,3 +175,4 @@ const LoginForm: React.FC = () => {
 };
 
 export default LoginForm;
+

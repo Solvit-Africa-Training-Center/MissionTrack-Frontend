@@ -1,6 +1,6 @@
-// import { useAuth } from "./context/AuthContext";
-// import EmployeeDashboard from "./pages/EmployeeDashboard"
-// import LoginForm from "./pages/LoginFom"
+
+
+// import AppRoute from "./Router/AppRoute";
 
 
 // const App: React.FC = () => {
@@ -32,3 +32,13 @@ function App() {
 }
 
 export default App
+// =======
+// function App() {
+
+//   return (
+//     <AppRoute/>
+//   );
+// }
+
+// export default App;
+
