@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 
@@ -176,4 +175,4 @@ const LoginForm: React.FC = () => {
 };
 
 export default LoginForm;
->>>>>>> 73ed0ae1c4427fac3c4824eafedfb217d3eeedf1
+
