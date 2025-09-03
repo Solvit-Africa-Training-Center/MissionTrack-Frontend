@@ -27,13 +27,13 @@ const Settings: React.FC = () => {
 
   return (
     <div className="flex h-screen bg-gray-50">
-      <Sidebar
+      {/* <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         sidebarItems={sidebarItems}
         quickLinks={quickLinks}
-      />
-      <div className="flex-1 flex flex-col">
+      /> */}
+       <div className="flex-1 flex flex-col">
         <Header />
 
         <main className="flex-1 px-6 overflow-auto">

@@ -17,7 +17,7 @@
 
 
 import LandingPage from "./pages/LandingPage" 
-//  import Settings from "./pages/Settings"
+  // import Settings from "./pages/Settings"
 
 
 function App() {

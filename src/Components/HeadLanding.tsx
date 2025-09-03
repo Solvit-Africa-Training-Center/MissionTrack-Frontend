@@ -5,7 +5,8 @@ const HeadLanding: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white w-full h-20 max-sm:h-15  shadow-sm border-b fixed border-gray-200 px-8 max-sm:px-2 py-6 max-sm:py-0">
+    <header className="bg-white w-full h-20 max-sm:h-15 shadow-sm border-b fixed top-0 left-0 z-50 border-gray-200 px-8 max-sm:px-2 py-6 max-sm:py-0">
+
       <div className="flex justify-between  max-sm:mt-2 items-center">
         {/* Mobile Menu Button */}
         <button

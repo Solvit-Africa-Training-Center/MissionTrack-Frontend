@@ -96,9 +96,9 @@ const Profile: React.FC = () => {
           <h1 className="text-xl font-semibold">Personal Information</h1>
           <button
             onClick={handleSubmit}
-            className="mt-3 px-4 py-2 rounded bg-blue-600 text-white"
+            className=" px-4 py-2 rounded bg-blue-600 text-white"
           >
-            Edit Profile
+            Save Changes
           </button>
         </div>
 

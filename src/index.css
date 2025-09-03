@@ -12,13 +12,17 @@
   --breakpoint-desktop: 1200px;
 
   /* Primary colors */
-  --color-primaryColor-50: oklch(0.9446 0.0284 327.43);
-  --color-primaryColor-100:oklch(0.824 0.1697 327.43) ;
-  --color-primaryColor-200: oklch(0.7501 0.1697 327.43);
-  --color-primaryColor-300: oklch(0.6387 0.1697 327.43);
-  --color-primaryColor-400:oklch(0.551 0.1697 327.43);
-  --color-primaryColor-500:oklch(0.4704 0.1697 327.43);
-
-  --color-primaryColor-800: oklch(0.3929 0.1574 327.43);
+  --color-primaryColor-50:oklch(0.8997 0.0486 260.89)
+   --color-primaryColor-50: oklch(0.8403 0.0793 260.27);
+  --color-primaryColor-50: oklch(0.8403 0.0793 260.27);
+  --color-primaryColor-100:oklch(0.7938 0.1044 259.71) ;
+  --color-primaryColor-200: oklch(0.7458 0.1311 259.56);
+  --color-primaryColor-300: oklch(0.7 0.1575 259.74)
+  --color-primaryColor-400:oklch(0.6592 0.1732 259.62)
+  --color-primaryColor-500:oklch(0.6231 0.188 259.81)
+--color-primaryColor-600oklch(0.5734 0.1884 260.01)
+--color-primaryColor-700:oklch(0.5367 0.1894 260.33)
+  --color-primaryColor-800: oklch(0.5013 0.1878 260.38)
+  --color-primaryColor-900: oklch(0.4661 0.1858 260.59)
 
 }

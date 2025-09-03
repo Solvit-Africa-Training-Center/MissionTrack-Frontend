@@ -10,9 +10,11 @@ import Feedback from "../Components/Feedback";
 
 const LandingPage: React.FC = () => {
   return (
-    <div className=" ">
-      <HeadLanding />
+    <div className="">
       <div className="">
+      <HeadLanding />
+      </div>
+      <div className="mt-20">
       <Hero />
       </div>
       <Features />
