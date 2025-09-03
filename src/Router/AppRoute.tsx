@@ -16,6 +16,7 @@ const AppRoute:React.FC=()=>{
       <Routes>
         <Route path="/login" element={<LoginForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
+     
       </Routes>
     </div>
     );
