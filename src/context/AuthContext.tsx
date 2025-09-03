@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useState, type ReactNode } from "react";
+import React, { createContext, useContext, useState, type ReactNode, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface AuthContextType {
-  user: string | null;
+  user: { email: string; name: string } | null;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
   token: string | null;
@@ -11,17 +11,35 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<string | null>(null);
-  const [token, setToken] = useState<string | null>(null);
+  const [user, setUser] = useState<{ email: string; name: string } | null>(null);
+  const [token, setToken] = useState<string | null>(localStorage.getItem("token"));
   const navigate = useNavigate();
+
+  // Fetch user profile when token exists (for page refresh)
+  useEffect(() => {
+    if (token && !user) {
+      fetchUserProfile(token);
+    }
+  }, [token]);
+
+  const fetchUserProfile = async (accessToken: string) => {
+    try {
+      const response = await fetch("https://api.escuelajs.co/api/v1/auth/profile", {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      });
+      if (!response.ok) throw new Error("Failed to fetch profile");
+      const profile = await response.json();
+      setUser({ email: profile.email, name: profile.name });
+    } catch (err) {
+      console.error("Profile fetch failed:", err);
+    }
+  };
 
   const login = async (email: string, password: string) => {
     try {
       const response = await fetch("https://api.escuelajs.co/api/v1/auth/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
 
@@ -30,13 +48,11 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
 
       const data = await response.json();
-
-      // API returns: { access_token: "...", refresh_token: "..." }
       setToken(data.access_token);
-      setUser(email);
-
-      // Store token in localStorage (optional, so session persists)
       localStorage.setItem("token", data.access_token);
+
+      // fetch employee profile
+      await fetchUserProfile(data.access_token);
 
       navigate("/dashboard");
     } catch (error) {
