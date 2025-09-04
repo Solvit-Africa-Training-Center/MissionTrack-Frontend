@@ -27,7 +27,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-amber flex gap-40 items-center justify-center
-     bg-gradient-to-br from-primaryColor-10 via-primaryColor-50 to-accent-10">
+     bg-gradient-to-br from-primaryColor-10 to-primaryColor-50 ">
       <div className=" flex justify-between gap-40">
         {/* Left Side Content */}
         <div className=" ">
