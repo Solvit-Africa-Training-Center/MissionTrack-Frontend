@@ -1,5 +1,6 @@
 import React from "react";
 import { FiFilePlus, FiCalendar, FiBarChart2 } from "react-icons/fi";
+import { useTheme } from "../hook/useTheme";
 
 // Example quick links
 const links = [
@@ -24,11 +25,12 @@ const links = [
 ];
 
 const QuickLinks: React.FC = () => {
+  const {theme} = useTheme();
   return (
-    <div className="bg-white rounded-xl shadow-sm p-5">
+    <div className={`rounded-xl shadow-sm p-5 ${theme === "light"?"bg-white text-black":"bg-gray-800 text-white"}`}>
       <h3 className="font-bold text-gray-800 mb-4">Quick Links</h3>
 
-      <div className="space-y-3">
+      <div className={`space-y-3 ${theme === "light"?"bg-white text-black":"bg-gray-800 text-white"}`}>
         {links.map((link, index) => (
           <button
             key={index}

@@ -24,11 +24,24 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 relative">
-
-      {/* Header */}
+      <div className="min-h-screen flex gap-40 items-center justify-center
+       bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 relative">
+        <div className="grid">
+          <div className="mt-5 grid gap-4">
+            <span className="text-blue-500 font-bold text-2xl">Stay Organized, Stay Ahead</span>
+            <p className="text-green-600">Sign in to submit new requests or follow up on <br /> approvals — all in one place.</p>
+          </div>
+           
+ <div className="h-90 w-90 mt-20">
+        <img src="pana.png" alt="frame"/>
+      </div>
+        </div>
+       
+      <div>
+        {/* Header */}
       <div className="text-center mb-8 mt-10 relative z-10">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-4 shadow-lg transform hover:scale-105 transition-transform duration-200">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600
+         to-indigo-600 rounded-2xl mb-4 shadow-lg transform hover:scale-105 transition-transform duration-200">
           <svg 
             className="w-8 h-8 text-white" 
             fill="none" 
@@ -170,7 +183,9 @@ const LoginForm: React.FC = () => {
           </p>
         </div>
       </div>
+      </div>
     </div>
+    
   );
 };
 

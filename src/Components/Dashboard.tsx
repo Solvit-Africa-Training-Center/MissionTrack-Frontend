@@ -31,13 +31,13 @@ const Dashboard: React.FC = () => {
   </Link>
 </div>
 
-          <div className="flex gap-3 items-center hover:bg-gray-100 p-2 rounded">
+          <div className={`flex gap-3 items-center p-2 rounded ${theme === "light"?"bg-white text-black hover:bg-gray-100":"bg-gray-800 text-white hover:bg-gray-700"}`}>
             <CiBellOn size={20} className="text-blue-500" />
             <Link to="/notifications" className="font-bold">
               Notifications
             </Link>
           </div>
-          <div className="flex gap-3 items-center hover:bg-gray-100 p-2 rounded">
+          <div className={`flex gap-3 items-center p-2 rounded ${theme === "light"?"bg-white text-black hover:bg-gray-100":"bg-gray-800 text-white hover:bg-gray-700"}`}>
             <FiUser size={20} className="text-blue-500" />
             <Link to="/profile" className="font-bold">
               Profile
@@ -51,15 +51,15 @@ const Dashboard: React.FC = () => {
           <div className="space-y-3">
             <div className="flex gap-2 items-center text-sm">
               <VscHome size={20} className="text-blue-500" />
-              <Link to="" className="text-lg">New Mission Request</Link>
+              <Link to="" className="text-sm">New Mission Request</Link>
             </div>
             <div className="flex gap-2 items-center text-sm">
               <VscHome size={20} className="text-blue-500" />
-              <Link to="" className="text-lg">New Mission Request</Link>
+              <Link to="" className="text-sm">New Mission Request</Link>
             </div>
             <div className="flex gap-2 items-center text-sm">
               <VscHome className="text-blue-500" size={20}/>
-              <Link to="" className="text-lg">New Mission Request</Link>
+              <Link to="" className="text-sm">New Mission Request</Link>
             </div>
           </div>
         </div>
@@ -76,12 +76,14 @@ const Dashboard: React.FC = () => {
           <h1 className={`font-bold mb-4 ${theme === "light"?" text-black" : " text-white"}`}>
             Here's your mission request overview
           </h1>
-          <MissionOverview />
+          <div>
+            <MissionOverview />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <RecentActivities />
-          <QuickLinks />
+          <QuickLinks/>
         </div>
       </main>
     </div>
