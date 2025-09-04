@@ -3,7 +3,10 @@ import { Route, Routes} from "react-router-dom";
 import LoginForm from "../pages/LoginForm"; // ✅ corrected import
 import Dashboard from "../pages/Dashboard";
 import LandingPage from "../pages/LandingPage";
-import Settings from "../pages/Settings";
+import Profile from "../Components/Settings/Profile";
+import Password from "../Components/Settings/Password";
+ import Notification from "../Components/Settings/Notification"
+
 
 const AppRoute = () => {
   // const location = useLocation();
@@ -20,7 +23,10 @@ const AppRoute = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Settings/>} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/details" element={<Profile/>} />
+        <Route path="/password" element={<Password/>} />
+        <Route path="/notifications" element={<Notification/>} />
       </Routes>
     </>
   );

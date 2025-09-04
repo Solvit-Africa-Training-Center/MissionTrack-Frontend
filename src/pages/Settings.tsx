@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../hook/useTheme";
 
 // Import the components you are rendering
-import Profile from "../Components/Profile";
-import Password from "../Components/Password";
-import Notification from "../Components/Notification";
+import Profile from "../Components/Settings/Profile";
+import Password from "../Components/Settings/Password";
+import Notification from "../Components/Settings/Notification";
 
 const Settings: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -131,6 +131,7 @@ const Settings: React.FC = () => {
 
         {/* Main Content */}
         <main className="flex-1 px-6 overflow-auto">
+
           <Profile />
           <Password />
           <Notification />
