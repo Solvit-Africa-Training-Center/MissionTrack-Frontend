@@ -8,17 +8,17 @@
 
 
 
-const EmployeeDashboard: React.FC = ()=>{
-    return(
+// const EmployeeDashboard: React.FC = ()=>{
+//     return(
 
-        <div>
-{/*           
-            <NavBar/>
-            <Dashboard/> */}
+//         <div>
+          
+//             <NavBar/>
+//             <Dashboard/>
             
-        </div>
-    );
-}
+//         </div>
+//     );
+// }
 
-export default EmployeeDashboard;
+// export default EmployeeDashboard;
 // >>>>>>> 73ed0ae1c4427fac3c4824eafedfb217d3eeedf1
