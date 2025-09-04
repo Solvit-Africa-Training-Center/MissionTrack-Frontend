@@ -51,7 +51,7 @@ const Password: React.FC = () => {
   };
 
   return (
-    <div className="h-[500px] w-[1300px] mt-10 flex bg-[rgba(236,244,241,0.9)] rounded-md shadow">
+    <div className="h-[500px] w-[1000px] mt-10 flex bg-[rgba(236,244,241,0.9)] rounded-md shadow">
       <div className="flex flex-col w-full">
         {/* Top navigation */}
         <div className="border-b border-gray-300 w-full">
