@@ -1,19 +1,29 @@
-import React from "react";
-import LandingPage from "./pages/LandingPage";
-// import Settings from "./pages/Settings";
-// import AppRoute from "./Router/AppRoute";
-// import { useAuth } from "./context/AuthContext";
-// import EmployeeDashboard from "./pages/EmployeeDashboard";
-// import LoginForm from "./pages/LoginForm";
 
-const App: React.FC = () => {
+
+import AppRoute from "./Router/AppRoute";
+
+
+// const App: React.FC = () => {
+//   const { user } = useAuth();
+
+//   return user ? (
+//     <EmployeeDashboard />  // ← Shows when logged in
+//   ) : (
+//     <LoginForm />          // ← Shows when not logged in
+//   );
+// };
+
+// export default App
+
+
+
+// =======
+function App() {
+
   return (
-    <div>
-      <LandingPage />
-      {/* <Settings /> */}
-      {/* <AppRoute /> */}
-    </div>
+    <AppRoute/>
   );
-};
+}
 
 export default App;
+

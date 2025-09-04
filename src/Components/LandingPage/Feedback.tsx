@@ -4,8 +4,8 @@ import React from "react";
 
 const Feedback: React.FC = () => {
     return (
-        <div className="flex justify-center">
-            <div className=" w-[1300px] h-[500px]">
+        <div className="flex  justify-center">
+            <div className=" w-[1300px] h-[400px]">
                 {/* Header */}
                 <div className="flex justify-center">
                     <div className="text-center">
