@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     "src/assets/image1.png",
     "src/assets/image2.png",
     "src/assets/image3.png",
-    
+
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,41 +29,43 @@ const Hero: React.FC = () => {
       ></div>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primaryColor-10 to-accent-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primaryColor-10 to-primaryColor-100 to-accent-10"></div>
 
       {/* Content */}
       <div className="relative flex justify-center">
-        <div className="h-[600px] w-[1300px] flex items-center justify-between">
+        <div className="h-[600px] w-[1300px]">
           {/* Left text */}
-          <div className="flex flex-col gap-10">
-            <div className="flex flex-col max-sm:mt-0 max-sm:ml-2 gap-4 max-sm:gap-10">
-              <p className="text-gray-800   11 max-sm:text-xl text-4xl">
-                Your Missions,
-                <br />
-                Streamlined from <br />
-                <span className="bg-gradient-to-r from-[#4D8FFA]/70 to-[#11A677]/70 bg-clip-text text-transparent">
-                  Start to Approval.
-                </span>
-              </p>
-              <p className="text-gray-800 text-sm fo max-sm:text-sm">
-                From Request to mission expenses.All in One Flow
-              </p>
+          <div className="h-[400px] w-[1000px] mt-30 ml-30 flex items-center justify-between">
+            <div className="flex flex-col gap-10">
+              <div className="flex flex-col max-sm:mt-0 max-sm:ml-2 gap-4 max-sm:gap-10">
+                <p className="text-gray-800   11 max-sm:text-xl text-4xl">
+                  Your Missions,
+                  <br />
+                  Streamlined from <br />
+                  <span className="bg-gradient-to-r from-[#4D8FFA]/70 to-[#11A677]/70 bg-clip-text text-transparent">
+                    Start to Approval.
+                  </span>
+                </p>
+                <p className="text-gray-800 text-sm fo max-sm:text-sm">
+                  From Request to mission expenses.All in One Flow
+                </p>
+              </div>
+              <div>
+                <button className="bg-primaryColor-500 text-white rounded-lg px-6 max-sm:p-1 ml-2 py-2">
+                  Get Started
+                </button>
+              </div>
             </div>
-            <div>
-              <button className="bg-primaryColor-500 text-white rounded-lg px-6 max-sm:p-1 ml-2 py-2">
-                Get Started
-              </button>
-            </div>
-          </div>
 
-          {/* Right image with fade animation */}
-          <div className="relative h-120 w-auto max-sm:h-100">
-            <img
-              key={currentIndex} // force re-render for animation
-              src={images[currentIndex]}
-              alt="Mission preview"
-              className="h-120 w-auto max-sm:h-100 border-gray-50 transition-opacity duration-1000 ease-in-out opacity-100"
-            />
+            {/* Right image with fade animation */}
+            <div className="relative h-120 w-auto max-sm:h-100">
+              <img
+                key={currentIndex} // force re-render for animation
+                src={images[currentIndex]}
+                alt="Mission preview"
+                className="h-120 w-auto max-sm:h-100 border-gray-50 transition-opacity duration-1000 ease-in-out opacity-100"
+              />
+            </div>
           </div>
         </div>
       </div>

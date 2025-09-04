@@ -19,7 +19,7 @@ const LandingPage: React.FC = () => {
       {/* Content */}
       <div className="relative z-10">
         <HeadLanding />
-        <div className="mt-20">
+        <div className="">
           <Hero />
         </div>
         <Features />
