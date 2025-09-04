@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "../hook/useTheme";
 
 // Example list of activities
 const activities = [
@@ -23,13 +24,15 @@ const activities = [
 ];
 
 const RecentActivities: React.FC = () => {
+  const {theme}=useTheme();
   return (
-    <div className="bg-white rounded-xl shadow-sm p-5">
+    <div className={`rounded-xl shadow-sm p-5 ${theme === "light"?"bg-white text-black":"bg-gray-800 text-white"}`} >
       <h3 className="font-bold text-gray-800 mb-4">Recent Activities</h3>
 
-      <div className="space-y-3">
+      <div className={`space-y-3 ${theme === "light"?"bg-white text-black":"bg-gray-800 text-white"}`}>
         {activities.map((activity, index) => (
-          <div
+         
+             <div
             key={index}
             className={`flex items-start gap-3 rounded-lg px-4 py-3 ${activity.background}`}
           >
@@ -42,6 +45,7 @@ const RecentActivities: React.FC = () => {
               <p className="text-xs text-gray-500">{activity.time}</p>
             </div>
           </div>
+         
         ))}
       </div>
     </div>

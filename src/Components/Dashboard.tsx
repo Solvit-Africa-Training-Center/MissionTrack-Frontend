@@ -76,12 +76,14 @@ const Dashboard: React.FC = () => {
           <h1 className={`font-bold mb-4 ${theme === "light"?" text-black" : " text-white"}`}>
             Here's your mission request overview
           </h1>
-          <MissionOverview />
+          <div>
+            <MissionOverview />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <RecentActivities />
-          <QuickLinks />
+          <QuickLinks/>
         </div>
       </main>
     </div>
