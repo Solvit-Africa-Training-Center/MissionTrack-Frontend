@@ -18,9 +18,10 @@ const HeadLanding: React.FC = () => {
         </button>
 
         {/* Logo */}
-        <div>
-          <h1 className="bg-gradient-to-r font-bold text-2xl max-sm:text-2xl from-[#4D8FFAE5] to-[#11A677E5] text-transparent bg-clip-text">
-            Mission Track
+        <div className="flex justify-between gap-4">
+          <img src="src/assets/logo.svg" alt="" />
+          <h1 className=" font-bold text-4xl mt-2 max-sm:text-2xl  text-transparent bg-clip-text">
+            <span className="text-primaryColor-700">Mission</span> <span className="text-accent-700">Track</span>T
           </h1>
         </div>
 

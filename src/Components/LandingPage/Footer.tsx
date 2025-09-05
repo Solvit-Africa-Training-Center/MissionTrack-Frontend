@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative mt-20 bg-gradient-to-r from-primaryColor-10 to-[#11A677] pt-20">
+    <footer className="relative mt-40 bg-gradient-to-r from-primaryColor-10 to-[#11A677] pt-20">
       {/* Call-to-action box (floating) */}
       <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[90%] max-w-2xl">
         <div className="bg-primaryColor-300 text-center p-6 rounded-2xl shadow-lg">

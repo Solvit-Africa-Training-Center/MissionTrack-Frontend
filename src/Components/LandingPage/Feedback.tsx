@@ -1,6 +1,5 @@
 
 import React from "react";
-import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 
 
@@ -43,6 +42,43 @@ const Feedback: React.FC = () => {
                                 MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal.
                             </p>
                         </div>
+                          <div className="flex justify-between gap-5 mt-7">
+                                <img src="src/assets/Ellipse 41.png" alt="" />
+                                <div className="mt-2">
+                                <h1 className="text-sm">Kimberly Mast</h1>
+                                <p className="text-xs">CEO , Cute RITE</p>
+                                </div>
+                            </div>
+
+                    </div>
+
+
+                    <div className="p-6 rounded-lg shadow-sm flex flex-col items-center gap-4 w-[250px] mx-auto">
+                        <div className=" bg-blue-100  rounded-full p-2">
+
+                        </div>
+                        <div className="flex flex-col items-center">
+                            {/* Stars Row */}
+                            <div className="flex space-x-1">
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                            </div>
+
+                            {/* Testimonial Text */}
+                            <p className="text-sm mt-5 text-center text-gray-800">
+                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal.
+                            </p>
+                            <div className="flex justify-between gap-5 mt-7">
+                                <img src="src/assets/Ellipse 41.png" alt="" />
+                                <div className="mt-2">
+                                <h1 className="text-sm">Kimberly Mast</h1>
+                                <p className="text-xs">CEO , Cute RITE</p>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -66,29 +102,13 @@ const Feedback: React.FC = () => {
                                 MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal.
                             </p>
                         </div>
-
-                    </div>
-
-
-                    <div className="p-6 rounded-lg shadow-sm flex flex-col items-center gap-4 w-[250px] mx-auto">
-                        <div className=" bg-blue-100  rounded-full p-2">
-
-                        </div>
-                        <div className="flex flex-col items-center">
-                            {/* Stars Row */}
-                            <div className="flex space-x-1">
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
-                                <FaStar className="text-yellow-400" />
+                          <div className="flex justify-between gap-5 mt-7">
+                                <img src="src/assets/Ellipse 41.png" alt="" />
+                                <div className="mt-2">
+                                <h1 className="text-sm">Kimberly Mast</h1>
+                                <p className="text-xs">CEO , Cute RITE</p>
+                                </div>
                             </div>
-
-                            {/* Testimonial Text */}
-                            <p className="text-sm mt-5 text-center text-gray-800">
-                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal.
-                            </p>
-                        </div>
 
                     </div>
 
