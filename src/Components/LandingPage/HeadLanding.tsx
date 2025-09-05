@@ -20,16 +20,17 @@ const HeadLanding: React.FC = () => {
         {/* Logo */}
         <div className="flex justify-between gap-4">
           <img src="src/assets/logo.svg" alt="" />
-          <h1 className=" font-bold text-4xl mt-2 max-sm:text-2xl  text-transparent bg-clip-text">
+          <h1 className=" font-bold text-3xl mt-1 max-sm:text-2xl  text-transparent bg-clip-text">
             <span className="text-primaryColor-700">Mission</span> <span className="text-accent-700">Track</span>T
           </h1>
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex justify-between gap-10">
-          <Link to="/">Home</Link>
-          <Link to="/request">Request</Link>
-          <Link to="/track">Track</Link>
+          <Link to="/">Features</Link>
+          <Link to="/request">How it works</Link>
+          <Link to="/track">Testimonials</Link>
+          <Link to="/track">Pricing</Link>
         </nav>
 
         {/* Sign Up Button */}

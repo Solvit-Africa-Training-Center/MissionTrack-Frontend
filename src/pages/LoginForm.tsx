@@ -32,8 +32,8 @@ const LoginForm: React.FC = () => {
         {/* Left Side Content */}
         <div className=" ">
           <div className="mt-5 grid gap-4">
-            <span className="text-blue-500 font-bold text-2xl">Stay Organized, Stay Ahead</span>
-            <p className="text-green-600">
+            <span className="text-primaryColor-800 font-bold text-2xl">Stay Organized, Stay Ahead</span>
+            <p className="text-accent-800">
               Sign in to submit new requests or follow up on <br /> approvals — all in one place.
             </p>
           </div>
