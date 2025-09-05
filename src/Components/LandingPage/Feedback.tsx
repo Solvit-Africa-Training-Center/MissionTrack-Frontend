@@ -1,4 +1,7 @@
+
 import React from "react";
+import { FaRegStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
 
 
 
@@ -25,12 +28,22 @@ const Feedback: React.FC = () => {
                         <div className=" bg-blue-100  rounded-full p-2">
 
                         </div>
-                        <div>
+                        <div className="flex flex-col items-center">
+                            {/* Stars Row */}
+                            <div className="flex space-x-1">
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                            </div>
 
-                            <p className="text-sm text-start mt-5 text-gray-800">
-                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomena
+                            {/* Testimonial Text */}
+                            <p className="text-sm mt-5 text-center text-gray-800">
+                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal.
                             </p>
                         </div>
+
                     </div>
 
 
@@ -38,12 +51,22 @@ const Feedback: React.FC = () => {
                         <div className=" bg-blue-100  rounded-full p-2">
 
                         </div>
-                        <div>
-                            
+                        <div className="flex flex-col items-center">
+                            {/* Stars Row */}
+                            <div className="flex space-x-1">
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                            </div>
+
+                            {/* Testimonial Text */}
                             <p className="text-sm mt-5 text-center text-gray-800">
-                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomena
+                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal.
                             </p>
                         </div>
+
                     </div>
 
 
@@ -51,12 +74,22 @@ const Feedback: React.FC = () => {
                         <div className=" bg-blue-100  rounded-full p-2">
 
                         </div>
-                        <div>
-                           
+                        <div className="flex flex-col items-center">
+                            {/* Stars Row */}
+                            <div className="flex space-x-1">
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                                <FaStar className="text-yellow-400" />
+                            </div>
+
+                            {/* Testimonial Text */}
                             <p className="text-sm mt-5 text-center text-gray-800">
-                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal
+                                MissionFlow has transformed how we handle business trips. What used to take days now takes minutes, and the expense tracking is phenomenal.
                             </p>
                         </div>
+
                     </div>
 
 
