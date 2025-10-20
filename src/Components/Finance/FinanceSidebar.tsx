@@ -25,8 +25,8 @@ const FinanceSidebar: React.FC = () => {
 
     // Quick actions (fixed icons)
     const quickActions = [
-        { icon: GrGroup, label: "Approved Missions", path: "/" },
-        { icon: FaFileAlt, label: "Funding assignments", path: "/subscriptions" },
+        { icon: GrGroup, label: "Approved Missions", path: "approved " },
+        { icon: FaFileAlt, label: "Funding assignments", path: "fundings" },
         { icon: FaChartBar, label: "Ongoing Missions", path: "" },
         { icon: FaChartBar, label: "Reports&Trends", path: "" },
 

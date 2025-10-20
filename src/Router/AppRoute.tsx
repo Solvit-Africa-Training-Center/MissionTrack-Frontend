@@ -32,7 +32,10 @@ import ManagerHome from "../pages/ManagerHome";
 import EmployeeHome from "../pages/EmployeeHome";
 import AllMission from "../pages/AllMission";
 import CompanyInformationPage from "../Components/Admin/companyInformationPage";
-import ProfileHome from "../Components/Settings/ProfileHome";
+import ProfileHome from "../Components/Settings/ProfileHome"
+import FinanceHome from "../pages/FinanceHome";
+import Approved from "../Components/Finance/Approved";
+import FundingAssignment from "../Components/Finance/FundingAssignment";
 
 
 
@@ -110,7 +113,12 @@ const AppRoute = () => {
         <Route path="/pending" element={<Pending />} />
         <Route path="/rejected" element={<Rejected />} />
 
-        <Route path="/finance" element={<FinanceDashboard />} />
+        <Route path="/finance" element={<FinanceDashboard />} >
+          <Route index element={<FinanceHome />} />
+          <Route path="approved" element={<Approved />} />
+          <Route path="fundings" element={<FundingAssignment />} /> 
+          
+        </Route>
         
 
 
