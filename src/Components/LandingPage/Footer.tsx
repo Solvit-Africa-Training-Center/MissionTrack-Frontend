@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-30">
+      <div className="max-w-7xl mx-auto px-6 mt-30">
         {/* Footer content */}
         <div className="max-w-6xl mx-auto flex justify-between pb-10 mt-[50px]">
           {/* Logo & Title */}

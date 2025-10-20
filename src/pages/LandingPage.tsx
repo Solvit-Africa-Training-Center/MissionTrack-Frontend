@@ -13,7 +13,7 @@ const LandingPage: React.FC = () => {
   return (
     <div className="relative z-10">
       <HeadLanding />
-      <div id="hero" className="mt-20">
+      <div id="hero" className="mt-18">
         <Hero />
       </div>
       <div id="features">
