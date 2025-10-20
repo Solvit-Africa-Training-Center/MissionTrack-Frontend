@@ -3,6 +3,7 @@ import Header from "../Components/HeaderDash";
 import Sidebar from "../Components/Dashboard/Sidebar";
 import { Outlet, useLocation } from "react-router-dom";
 
+
 const twTheme = (light: string, dark: string) => {
   return `${light} dark:${dark}`;
 };

@@ -1,14 +1,11 @@
 
-// import MissionReportDetails from "./manager/MissionReportDetails";
-
-// import AdminActions from "./pages/AdminActions";
-
-
-import AppRoute from "./Router/AppRoute";
 
 
 
-// Rejected
+// import AppRoute from "./Router/AppRoute";
+import AISuggest from "./pages/AISuggest";
+
+
 
 
 
@@ -18,12 +15,9 @@ function App() {
   return (
 
     <>
-    {/* <FinanceDashboard/> */}
-  {/* <Subscriptions/> */}
-       <AppRoute/>
-        {/* <MissionReportDetails/> */}
-       {/* <AdminActions/> */}
-       {/* <AdminDashboard/> */}
+   
+       {/* <AppRoute/> */}
+       <AISuggest/>
     </>
       );
 }

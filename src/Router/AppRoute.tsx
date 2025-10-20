@@ -28,8 +28,15 @@ import AdminHome from "../pages/AdminHome";
 import ManagerHome from "../pages/ManagerHome";
 import EmployeeHome from "../pages/EmployeeHome";
 import AllMission from "../pages/AllMission";
-import ProfileHome from "../Components/Settings/ProfileHome";
 import CompanyInformationPage from "../Components/Admin/companyInformationPage";
+import ProfileHome from "../Components/Settings/ProfileHome"
+import FinanceHome from "../pages/FinanceHome";
+import Approved from "../Components/Finance/Approved";
+import FundingAssignment from "../Components/Finance/FundingAssignment";
+import Ongoing from "../Components/Finance/Ongoing";
+
+
+
 
 const AppRoute = () => {
   return (
@@ -40,7 +47,7 @@ const AppRoute = () => {
         <Route path="/employee" element={<Dashboard />} >
           <Route index element={<EmployeeHome />} />
           <Route path="notifications" element={<NotificationPage />} />
-            <Route path="profileA" element={<Profile />}>
+          <Route path="profileA" element={<Profile />}>
             <Route index element={<ProfileHome />} />
             <Route path="preferencea" element={<Notification />} />
             <Route path="passwordA" element={<Password />} />
@@ -96,10 +103,16 @@ const AppRoute = () => {
         <Route path="/pending" element={<Pending />} />
         <Route path="/pending" element={<Pending />} />
         <Route path="/rejected" element={<Rejected />} />
-        <Route path="/companies" element={<AllCompanies />} />
-        <Route path="/subscriptions" element={<Subscriptions />} />
-        <Route path="/all" element={<AllMission />} />
-        <Route path="/finance" element={<FinanceDashboard />} />
+        {/* Finance Routes */}
+        <Route path="/finance" element={<FinanceDashboard />} >
+          <Route path="approved" element={<Approved />} />
+          <Route path="fundings" element={<FundingAssignment />} />
+          <Route path="ongoing" element={<Ongoing />} />
+        </Route>
+
+        
+
+
 
       </Routes>
     </>
